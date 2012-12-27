@@ -2,7 +2,8 @@
 <%@page import="com.sms.vo.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
+<%@page import="java.util.List"%>
+<%@page import="java.util.Iterator" %>
 <%@taglib prefix="p" uri="/WEB-INF/sms.tld"%>
 <%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -138,6 +139,11 @@ function fun1(num) {
 					</a></li>
 				</ul>
 			</div>
+		</div>
+		<div><a href="logout.jsp"> Logout </a>
+		<%if(request.getAttribute("message")!=null){%>
+			<%= request.getAttribute("message") %>
+		<%} %>
 		</div>
 		<form name="myform" action="SmsController">
 
