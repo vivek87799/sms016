@@ -379,6 +379,7 @@ function fun1(num) {
 			<!-- <input type="button" value="UPDATE" onclick="fun1(4)"> -->
 			<p:Button name="update" type="button" value="update"
 				onclick="fun1(4)" />
+				<p:Button name="cancel" type="button" value="cancel" onclick="fun1(9)" />
 			<!-- The attributes edit and bean rvo is removed so the button goes to add -->
 			<%
 				session.removeAttribute("edit");
