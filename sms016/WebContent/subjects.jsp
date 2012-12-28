@@ -125,11 +125,12 @@ function fun1(num) {
 					style="border: 0pt none;">
 				</a>
 			</div>
+			<div align="right"><a href="logout.jsp"> Logout </a></div>
 			<div id="navigation">
 				<ul>
-					<li><a href="#" class="nav_home active navigationpref"><br />ADMIN
+					<li><a href="subjects.jsp" class="nav_home active navigationpref"><br />ADMIN
 					</a></li>
-					<li><a href="#" class="nav_about navigationpref"><br />About
+					<li><a href="AddTeacher.jsp" class="nav_about navigationpref"><br />ADD TEACHERS
 					</a></li>
 					<li><a href="#" class="nav_workshops navigationpref"><br />Workshops
 					</a></li>
@@ -140,7 +141,7 @@ function fun1(num) {
 				</ul>
 			</div>
 		</div>
-		<div><a href="logout.jsp"> Logout </a>
+		<div>
 		<%if(request.getAttribute("message")!=null){%>
 			<%= request.getAttribute("message") %>
 		<%} %>
