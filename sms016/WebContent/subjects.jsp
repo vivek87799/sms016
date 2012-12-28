@@ -28,7 +28,7 @@ function fun1(num) {
 			radios = document.forms.myform.elements.r_subject;
 			if(radios.length==undefined){
 				  if(document.forms.myform.elements.r_subject.checked==true){
-					  check=1;
+					  check=1;					  
 				  }
 				}
 		}else if(document.getElementById("extra").checked==true){
