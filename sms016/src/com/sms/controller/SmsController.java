@@ -34,7 +34,6 @@ public class SmsController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		String val = (String) request.getParameter("val");
 		System.out.println("hidden---->>>>>>>>>>>" + val);
 		HttpSession session=request.getSession();		
