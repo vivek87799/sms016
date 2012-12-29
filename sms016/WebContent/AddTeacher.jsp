@@ -44,6 +44,7 @@
 	<div align="center">
 		<form action="addtcontroller">
 		TEACHER NAME : <input type="text" name="tn" id="tn">
+		<p:Button name="Add More Details" type="button" value="Add More Details" onclick="fun1(1)" />
 		</form>
 	</div>
 	</div>
