@@ -6,6 +6,7 @@
  <jsp-version>2.0</jsp-version>
  <short-name>p</short-name>
  <display-name>Label</display-name>
+ 
  <tag>
   <name>Label</name>
   <tag-class>com.sms.customtags.LabelTag</tag-class>
@@ -17,6 +18,11 @@
   </attribute>
  </tag>
  
+ <tag>
+ <name>TeacherTable</name>
+ <tag-class>com.sms.customtags.RetreiveTeacherDetails</tag-class>
+ <body-content>empty</body-content>
+ </tag>
  
  <tag>
   <name>Button</name>
@@ -42,6 +48,7 @@
    <rtexprvalue>false</rtexprvalue>
   </attribute>
  </tag>
+ 
  <tag>
   <name>Link</name>
   <tag-class>com.sms.customtags.LinkTag</tag-class>
@@ -57,6 +64,7 @@
    <rtexprvalue>false</rtexprvalue>
   </attribute>
  </tag>
+ 
  <tag>
   <name>Text</name>
   <tag-class>com.sms.customtags.TextTag</tag-class>
@@ -67,4 +75,5 @@
    <rtexprvalue>false</rtexprvalue>
   </attribute>
  </tag>
+ 
 </taglib>
