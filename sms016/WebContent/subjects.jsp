@@ -132,7 +132,7 @@ function fun1(num) {
 					</a></li>
 					<li><a href="AddTeacher.jsp" class="nav_about navigationpref"><br />ADD TEACHERS
 					</a></li>
-					<li><a href="TeacherTable.jsp" class="nav_workshops navigationpref"><br />TEACHERS Table
+					<li><a href="TeacherTable.jsp" class="nav_workshops navigationpref"><br />Workshops
 					</a></li>
 					<li><a href="#" class="nav_sports navigationpref"><br />Sports
 					</a></li>
