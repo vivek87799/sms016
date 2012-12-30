@@ -132,7 +132,7 @@ function fun1(num) {
 					</a></li>
 					<li><a href="AddTeacher.jsp" class="nav_about navigationpref"><br />ADD TEACHERS
 					</a></li>
-					<li><a href="#" class="nav_workshops navigationpref"><br />Workshops
+					<li><a href="TeacherTable.jsp" class="nav_workshops navigationpref"><br />TEACHERS Table
 					</a></li>
 					<li><a href="#" class="nav_sports navigationpref"><br />Sports
 					</a></li>
@@ -183,45 +183,48 @@ function fun1(num) {
 					<!-- Div for the type selection -->
 					<div>
 						<%
-							if (!(session.isNew())) {
-								if (type1.equalsIgnoreCase("extra")) {
-						%>
-						<!--  <p:Button name="type" type="radio" value="subject" onclick="fun()"/>SUBJECT INFO
-    <p:Button name="type" type="radio" value="extra" onclick="fun()"/>EXTRA CURRICULAR INFO -->
-
-						<input type="radio" name="type" id="subject" value="subject"
-							onclick="fun()">SUBJECT INFO<br> <input type="radio"
-							name="type" id="extra" value="extra" onclick="fun()" checked>EXTRA
-						CURRICULAR ACTIVITIES INFO
-						<%
- 	} else if (type1.equalsIgnoreCase("subject")) {
- %>
-						<!--<p:Button name="type" type="radio" value="subject" onclick="fun()"/>SUBJECT INFO!-->
-						<input type="radio" name="type" id="subject" value="subject"
-							onclick="fun()" checked>SUBJECT INFO<br>
-						<!--<p:Button name="type" type="radio" value="extra" onclick="fun()"/>EXTRA CURRICULAR INFO -->
-						<input type="radio" name="type" id="extra" value="extra"
-							onclick="fun()">EXTRA CURRICULAR ACTIVITIES INFO
-						<%
-							}
+							if (!(session.isNew()) && type1!=null) {
+								
+									if (type1.equalsIgnoreCase("extra")) {
+								%>
+								<!--  <p:Button name="type" type="radio" value="subject" onclick="fun()"/>SUBJECT INFO
+		    <p:Button name="type" type="radio" value="extra" onclick="fun()"/>EXTRA CURRICULAR INFO -->
+		
+								<input type="radio" name="type" id="subject" value="subject"
+									onclick="fun()">SUBJECT INFO<br> <input type="radio"
+									name="type" id="extra" value="extra" onclick="fun()" checked>EXTRA
+								CURRICULAR ACTIVITIES INFO
+								<%
+		 							} else if (type1.equalsIgnoreCase("subject")) {
+		 						%>
+								<!--<p:Button name="type" type="radio" value="subject" onclick="fun()"/>SUBJECT INFO!-->
+								<input type="radio" name="type" id="subject" value="subject"
+									onclick="fun()" checked>SUBJECT INFO<br>
+								<!--<p:Button name="type" type="radio" value="extra" onclick="fun()"/>EXTRA CURRICULAR INFO -->
+								<input type="radio" name="type" id="extra" value="extra"
+									onclick="fun()">EXTRA CURRICULAR ACTIVITIES INFO
+								<%
+									}								
+								
 							} else {
-						%>
-						<!-- <p:Button name="type" type="radio" value="subject" onclick="fun()"/>SUBJECT INFO
-	<p:Button name="type" type="radio" value="extra" onclick="fun()"/>EXTRA CURRICULAR INFO !-->
-						<input type="radio" name="type" id="subject" value="subject"
-							onclick="fun()">SUBJECT INFO<br> <input type="radio"
-							name="type" id="extra" value="extra" onclick="fun()">EXTRA
-						CURRICULAR ACTIVITIES INFO
-						<%
- 	System.out.println("subject---> in else " + type1);
- 	}
- %>
+							%>
+							<!-- <p:Button name="type" type="radio" value="subject" onclick="fun()"/>SUBJECT INFO
+		<p:Button name="type" type="radio" value="extra" onclick="fun()"/>EXTRA CURRICULAR INFO !-->
+							<input type="radio" name="type" id="subject" value="subject"
+								onclick="fun()">SUBJECT INFO<br> <input type="radio"
+								name="type" id="extra" value="extra" onclick="fun()">EXTRA
+							CURRICULAR ACTIVITIES INFO
+							<%
+	 						System.out.println("subject---> in else " + type1);
+	 						}
+	 						%>
 					</div>
 					<%
 						System.out.println(session.isNew() + " is session new");
 						if (session.isNew() == false) {
-							String type = (String) session.getAttribute("type");
-							if (type.equalsIgnoreCase("subject")) {
+							//String type = (String) session.getAttribute("type");
+							if(type1!=null){
+							if (type1.equalsIgnoreCase("subject")) {
 								List<SubjectVO> subject_list = (List<SubjectVO>) session.getAttribute("sub_list");
 								Iterator<SubjectVO> io = subject_list.iterator();
 								SubjectVO rvo = new SubjectVO();
@@ -440,7 +443,8 @@ function fun1(num) {
 				</div>
 	<% 
 			}
-		}
+		}					
+	}
 	%>
 	
 	</div>

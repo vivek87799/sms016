@@ -42,23 +42,26 @@
 		</div>
 		<div id="middle">
 	<div align="center">
-		<form action="addtcontroller">
+		<form action="TeacherTableController">
 		<br/><br/><br/>
 		<table>
-		<tr>
-			<td>TEACHER ID :</td>
-			<td><input type="text" name="tid" id="tid"><br/></td>
-		</tr>
-		<tr>
-		 	<td>TEACHER NAME :</td>
-		 	<td><input type="text" name="tname" id="tname"><br/></td>
-		</tr>
-		<tr>
-		<td><p:TeacherTable></p:TeacherTable></td>
-		</tr>
-		<tr>
-			<td><br/><br/><h4>Click here to add more details : <a href="TeacherTable.jsp">click</a></h4></td> 
-		</tr>
+			<tr>
+				<td> column name :</td>
+				<td><input type="text" name="cname" id="cname"/></td>
+			</tr>				
+			<tr>
+				<td>datatype :</td>
+				<td>
+				<select name="datatype">
+					<option value="int">number</option>
+					<option value="char">character</option>
+					<option value="date">date</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+			<td><input type="submit" name="Addcolumn" value="Add Column"/></td>
+			</tr>
 		</table>
 		</form>
 	</div>
