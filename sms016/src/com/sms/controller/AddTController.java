@@ -12,15 +12,15 @@ import com.sms.exceptions.SmsException;
 import com.sms.vo.TeacherDetailsVO;
 
 /**
- * Servlet implementation class TeacherTableController
+ * Servlet implementation class AddTController
  */
-public class TeacherTableController extends HttpServlet {
+public class AddTController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public TeacherTableController() {
+    public AddTController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,6 +30,11 @@ public class TeacherTableController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String val = (String) request.getParameter("val");
+		if(val.equalsIgnoreCase("1")){
+			
+		}
+		else if(val.equalsIgnoreCase("2")){
 		TeacherDetailsBO bo = new TeacherDetailsBO();
 		TeacherDetailsVO vo = new TeacherDetailsVO();
 		vo.setNewcolumn(request.getParameter("cname"));
@@ -45,7 +50,7 @@ public class TeacherTableController extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		}
 	}
 
 	/**

@@ -39,4 +39,14 @@
     <servlet-name>TeacherTableController</servlet-name>
     <url-pattern>/TeacherTableController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddTController</display-name>
+    <servlet-name>AddTController</servlet-name>
+    <servlet-class>com.sms.controller.AddTController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddTController</servlet-name>
+    <url-pattern>/AddTController</url-pattern>
+  </servlet-mapping>
 </web-app>

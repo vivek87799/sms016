@@ -1,4 +1,3 @@
-
 <%@page import="com.sms.vo.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -13,7 +12,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <script type="text/javascript">
-
+function fun(num) {
+	document.getElementById("val").value=num;
+	document.myform.submit();
+}
 </script>
 </head>
 <body>
@@ -31,7 +33,7 @@
 					</a></li>
 					<li><a href="AddTeacher.jsp" class="nav_about active navigationpref"><br />ADD TEACHERS
 					</a></li>
-					<li><a href="TeacherTable.jsp" class="nav_workshops navigationpref"><br />TEACHERS Table
+					<li><a href="TeacherTable.jsp" class="nav_workshops navigationpref"><br />Workshops
 					</a></li>
 					<li><a href="#" class="nav_sports navigationpref"><br />Sports
 					</a></li>
@@ -41,27 +43,49 @@
 			</div>
 		</div>
 		<div id="middle">
-	<div align="center">
-		<form action="addtcontroller">
-		<br/><br/><br/>
-		<table>
-		<tr>
-			<td>TEACHER ID :</td>
-			<td><input type="text" name="tid" id="tid"><br/></td>
-		</tr>
-		<tr>
-		 	<td>TEACHER NAME :</td>
-		 	<td><input type="text" name="tname" id="tname"><br/></td>
-		</tr>
-		<tr>
-		<td><p:TeacherTable></p:TeacherTable></td>
-		</tr>
-		<tr>
-			<td><br/><br/><h4>Click here to add more details : <a href="TeacherTable.jsp">click</a></h4></td> 
-		</tr>
-		</table>
-		</form>
-	</div>
+			<form action="AddTController">
+				<div id="left">
+					<br/><br/><br/>
+					<table>
+					<tr>
+					<td>TEACHER ID :</td>
+					<td><input type="text" name="tid" id="tid"><br/></td>
+					</tr>
+					<tr>
+		 			<td>TEACHER NAME :</td>
+		 			<td><input type="text" name="tname" id="tname"><br/></td>
+					</tr>
+					<tr>
+					<!-- <td><p:TeacherTable></p:TeacherTable></td> !-->
+					</tr>
+					<tr>
+					<td><p:Button name="AddTeacher" type="button" value="AddTeacher" onclick="fun(1)" /></td>
+					</tr>
+					</table>
+					<input type="hidden" name="val" id="val">
+				</div>
+				<div id="right">
+					<table>
+					<tr>
+					<td>Column Name :</td>
+					<td><input type="text" name="cname" id="cname"/></td>
+					</tr>				
+					<tr>
+					<td>Datatype :</td>
+					<td>
+					<select name="datatype">
+						<option value="int">number</option>
+						<option value="char">character</option>
+						<option value="date">date</option>
+					</select>
+					</td>
+					</tr>
+					<tr>
+					<td><p:Button name="AddDetail" type="button" value="AddDetail" onclick="fun(2)" /></td>
+					</tr>
+					</table>
+				</div>
+			</form>
 	</div>
 	</div>
 	<div id="footer">
